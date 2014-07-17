@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "ChineseCalendar-Swift.h"
+
 #define startYear  2001
 
 @interface ViewController ()
@@ -18,6 +20,11 @@
 - (void)viewDidLoad
 {
     NSLog(@"%@",[self getChineseCalendarWithString2:@"2012 腊月 廿九"]);
+ 
+    
+    KDCncal *cnCal = [KDCncal new];
+    NSLog(@"%@",[cnCal getChineseCalendarWithString2:@"2012 腊月 廿九"]);
+    
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34A23D531976781D0060A255 /* KDCnCal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A23D521976781D0060A255 /* KDCnCal.swift */; };
 		34DEC0C9175DE77E00DF8BAA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34DEC0C8175DE77E00DF8BAA /* UIKit.framework */; };
 		34DEC0CB175DE77E00DF8BAA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34DEC0CA175DE77E00DF8BAA /* Foundation.framework */; };
 		34DEC0CD175DE77E00DF8BAA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34DEC0CC175DE77E00DF8BAA /* CoreGraphics.framework */; };
@@ -21,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		34A23D511976781D0060A255 /* ChineseCalendar-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ChineseCalendar-Bridging-Header.h"; sourceTree = "<group>"; };
+		34A23D521976781D0060A255 /* KDCnCal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KDCnCal.swift; sourceTree = "<group>"; };
 		34DEC0C5175DE77E00DF8BAA /* ChineseCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChineseCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34DEC0C8175DE77E00DF8BAA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		34DEC0CA175DE77E00DF8BAA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -88,7 +91,9 @@
 				34DEC0E0175DE77E00DF8BAA /* ViewController.h */,
 				34DEC0E1175DE77E00DF8BAA /* ViewController.m */,
 				34DEC0E3175DE77E00DF8BAA /* ViewController.xib */,
+				34A23D521976781D0060A255 /* KDCnCal.swift */,
 				34DEC0CF175DE77E00DF8BAA /* Supporting Files */,
+				34A23D511976781D0060A255 /* ChineseCalendar-Bridging-Header.h */,
 			);
 			path = ChineseCalendar;
 			sourceTree = "<group>";
@@ -173,6 +178,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34A23D531976781D0060A255 /* KDCnCal.swift in Sources */,
 				34DEC0D5175DE77E00DF8BAA /* main.m in Sources */,
 				34DEC0D9175DE77E00DF8BAA /* AppDelegate.m in Sources */,
 				34DEC0E2175DE77E00DF8BAA /* ViewController.m in Sources */,
@@ -260,10 +266,14 @@
 		34DEC0E9175DE77E00DF8BAA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ChineseCalendar/ChineseCalendar-Prefix.pch";
 				INFOPLIST_FILE = "ChineseCalendar/ChineseCalendar-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ChineseCalendar/ChineseCalendar-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -271,10 +281,13 @@
 		34DEC0EA175DE77E00DF8BAA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ChineseCalendar/ChineseCalendar-Prefix.pch";
 				INFOPLIST_FILE = "ChineseCalendar/ChineseCalendar-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ChineseCalendar/ChineseCalendar-Bridging-Header.h";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -298,6 +311,7 @@
 				34DEC0EA175DE77E00DF8BAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
